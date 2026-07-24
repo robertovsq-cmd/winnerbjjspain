@@ -11,6 +11,11 @@ type Content = {
   intro: string;
   facts: string[];
 };
+const factDescriptions: Record<string, string> = {
+  "Fundamentals y avanzado": "Empieza con una base sólida de posiciones, seguridad y movimientos esenciales. A medida que progresas, profundizas en transiciones, estrategia y soluciones para situaciones más complejas.",
+  Gi: "El kimono permite entender el control, los agarres y la precisión técnica. Aprenderás a utilizar sus detalles de forma segura y progresiva, respetando la tradición del Brazilian Jiu-Jitsu.",
+  "Entrenamiento técnico": "Cada clase combina explicación, práctica guiada y repetición consciente. El objetivo es que entiendas el porqué de cada movimiento y puedas aplicarlo con calma y eficacia.",
+};
 const content: Record<string, Content> = {
   "/about": {
     eyebrow: "La academia",
@@ -208,8 +213,7 @@ function Page({ data }: { data: Content }) {
             <span className="eyebrow">0{index + 1}</span>
             <h2 style={{ fontSize: "1.45rem" }}>{fact}</h2>
             <p style={{ lineHeight: 1.6, color: "#526169" }}>
-              Entrenamiento con método, atención a los detalles y una comunidad
-              que te ayuda a avanzar.
+              {factDescriptions[fact] ?? "Entrenamiento con método, atención a los detalles y una comunidad que te ayuda a avanzar."}
             </p>
           </article>
         ))}
