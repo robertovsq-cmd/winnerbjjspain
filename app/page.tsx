@@ -149,6 +149,13 @@ export async function generateMetadata({
       "Conoce la historia de la Familia Behring, la trayectoria de Mestre Flavio Behring y su legado en el Brazilian Jiu-Jitsu.",
     );
   }
+  if (path === "/why-bjj-barcelona") {
+    return pageMetadata(
+      path,
+      "¿Por qué entrenar Brazilian Jiu-Jitsu en Barcelona?",
+      "Descubre los beneficios del Brazilian Jiu-Jitsu: defensa personal, salud, confianza y técnica en Winner Behring Spain.",
+    );
+  }
   const p = content[path];
   return p
     ? pageMetadata(path, p.title, p.intro)
@@ -245,6 +252,15 @@ function BehringFamilyPage() {
   );
 }
 
+function WhyBjjBarcelonaPage() {
+  const pillars = [
+    ["Equilibrio", "Todo empieza por controlar el propio centro de gravedad. El equilibrio permite defenderte y mantener el control en cada movimiento."],
+    ["Movimiento", "Desarrollamos movimientos inteligentes que reducen el esfuerzo innecesario y mejoran la eficiencia, el tiempo y la coordinación."],
+    ["Palanca", "En lugar de depender de la fuerza física, el Jiu-Jitsu utiliza palancas para controlar a personas más grandes y fuertes con la técnica adecuada."],
+  ];
+  return <main><section style={{ background: "#071923", color: "white", padding: "clamp(70px,12vw,130px) 0" }}><div className="wrap" style={{ maxWidth: 980 }}><p className="eyebrow">Brazilian Jiu-Jitsu · Barcelona</p><h1 style={{ fontSize: "clamp(3rem,7vw,6.5rem)", letterSpacing: "-.07em", lineHeight: .9, margin: "16px 0 24px" }}>¿Por qué entrenar<br /><i style={{ color: "#c9a35e", fontFamily: "Georgia,serif", fontWeight: 400 }}>Jiu-Jitsu en Barcelona?</i></h1><p style={{ maxWidth: 700, fontSize: "1.12rem", lineHeight: 1.75, color: "#d9e3e4" }}>En Winner Behring Spain creemos que el Brazilian Jiu-Jitsu es mucho más que un arte marcial: es un sistema completo de defensa personal, desarrollo personal, condición física y disciplina, construido sobre más de 75 años de tradición Behring.</p><a href={wa} className="button" style={{ marginTop: 28 }}>Reserva tu clase de prueba</a></div></section><article className="wrap" style={{ maxWidth: 940, padding: "78px 0" }}><section><p className="eyebrow">El arte suave</p><h2 style={{ fontSize: "clamp(2.1rem,4.5vw,3.8rem)", letterSpacing: "-.05em", lineHeight: .96, margin: "14px 0 22px" }}>Un arte marcial inteligente, no agresivo.</h2><p style={{ fontSize: "1.05rem", lineHeight: 1.8, color: "#34464d" }}>A diferencia de lo que muchas personas creen, el BJJ no se basa en golpes ni patadas. Utiliza palanca, equilibrio, movimiento y técnica para controlar a un oponente de forma eficiente. Una persona más pequeña o con menos fuerza puede defenderse frente a alguien mayor aplicando técnica en vez de fuerza. Por eso se conoce como <em>el arte suave</em>.</p></section><section style={{ marginTop: 64 }}><p className="eyebrow">Método Winner Behring</p><h2 style={{ fontSize: "clamp(2.1rem,4.5vw,3.8rem)", letterSpacing: "-.05em", lineHeight: .96, margin: "14px 0 28px" }}>Tres pilares para progresar.</h2><div className="grid grid-3">{pillars.map(([name, text], index) => <article key={name} style={{ borderTop: "2px solid #c9a35e", paddingTop: 20 }}><span className="eyebrow">0{index + 1}</span><h3 style={{ fontSize: "1.6rem", margin: "8px 0" }}>{name}</h3><p style={{ lineHeight: 1.7, color: "#526169" }}>{text}</p></article>)}</div><p style={{ marginTop: 26, lineHeight: 1.75, color: "#34464d" }}>Estos conceptos forman la base del Método Progresivo Winner Behring, preservando la filosofía tradicional transmitida por los maestros Flávio Behring, Sylvio Behring, Maurição Behring y Álvaro Barreto.</p></section><section className="grid grid-2" style={{ marginTop: 72, gap: 45 }}><div><p className="eyebrow">Defensa personal y deporte</p><h2 style={{ fontSize: "2.25rem", letterSpacing: "-.05em", lineHeight: 1 }}>Una formación completa.</h2><p style={{ lineHeight: 1.75, color: "#34464d" }}>En Winner Behring Spain trabajamos defensa personal tradicional, Brazilian Jiu-Jitsu con kimono y grappling No-Gi. Esta combinación te prepara para situaciones reales, el desarrollo personal y la competición si decides seguir ese camino.</p></div><div style={{ background: "#e9e5db", padding: 30 }}><p className="eyebrow">Más allá del tatami</p><h3 style={{ fontSize: "1.7rem", margin: "10px 0" }}>Disciplina para tu vida.</h3><p style={{ lineHeight: 1.7 }}>El entrenamiento desarrolla respeto, autocontrol, confianza, responsabilidad y resiliencia mental. Las clases estructuradas ayudan a niños y adultos a sentirse más centrados y seguros en su día a día.</p></div></section><section style={{ marginTop: 68 }}><p className="eyebrow">Salud, confianza y comunidad</p><h2 style={{ fontSize: "clamp(2.1rem,4.5vw,3.8rem)", letterSpacing: "-.05em", lineHeight: .96, margin: "14px 0 24px" }}>Un entrenamiento que transforma.</h2><p style={{ lineHeight: 1.8, color: "#34464d" }}>Cada clase es un entrenamiento de cuerpo completo que mejora la condición cardiovascular, movilidad, flexibilidad, fuerza funcional, gestión del peso, resistencia y reducción del estrés. No necesitas experiencia previa: recibimos a principiantes, adultos, niños, mujeres, competidores y practicantes recreativos.</p><p style={{ lineHeight: 1.8, color: "#34464d" }}>Al aprender a mantener la calma bajo presión, resolver problemas y superar retos, la confianza que construyes en el tatami se traslada al trabajo, los estudios, las relaciones y la vida cotidiana.</p></section></article><section style={{ background: "#000", color: "white", padding: "72px 0", textAlign: "center" }}><div className="wrap"><p className="eyebrow">Jiu-Jitsu tradicional en Barcelona</p><h2 style={{ fontSize: "clamp(2.2rem,5vw,4rem)", letterSpacing: "-.05em", margin: "14px auto 22px", maxWidth: 820 }}>Empieza hoy tu camino en el Brazilian Jiu-Jitsu.</h2><p style={{ maxWidth: 650, margin: "0 auto", lineHeight: 1.7, color: "#d9e3e4" }}>Entrena con una de las líneas más respetadas del mundo y forma parte de la familia Winner Behring.</p><a href={wa} className="button" style={{ marginTop: 28 }}>Reserva tu clase de prueba</a></div></section></main>;
+}
+
 export default async function Home({
   searchParams,
 }: {
@@ -252,6 +268,7 @@ export default async function Home({
 }) {
   const path = (await searchParams).page ?? "";
   if (path === "/family-behring") return <BehringFamilyPage />;
+  if (path === "/why-bjj-barcelona") return <WhyBjjBarcelonaPage />;
   const data = content[path];
   if (data) return <Page data={data} />;
   return (

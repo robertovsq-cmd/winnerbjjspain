@@ -59,6 +59,7 @@ export function Header() {
           <Link href="/barcelona">Barcelona</Link>
           <Link href="/about">La academia</Link>
           <Link href="/family-behring">Familia Behring</Link>
+          <Link href="/why-bjj-barcelona">¿Por qué BJJ?</Link>
         </nav>
         <a
           href="https://www.instagram.com/winner_behring_spain/"
