@@ -113,15 +113,15 @@ const content: Record<string, Content> = {
     ],
   },
   "/barcelona/la-salut": {
-    eyebrow: "BJJ Badalona",
-    title: "Jiu-Jitsu en Badalona.",
-    intro: "Entrena en JK1 Boxing, Carrer de l'Havana 7.",
+    eyebrow: "BJJ La Salut · Badalona",
+    title: "Jiu-Jitsu en La Salut, Badalona.",
+    intro: "Entrena en JK1 Boxing, Carrer de l'Havana 7, La Salut, Badalona.",
     facts: ["Martes y jueves", "10:30 y 20:30", "Carrer de l'Havana 7"],
   },
   "/barcelona/lesseps": {
-    eyebrow: "BJJ Lesseps",
-    title: "Jiu-Jitsu cerca de Lesseps.",
-    intro: "Tu grupo de BJJ en Gràcia, a pocos minutos de Lesseps.",
+    eyebrow: "BJJ Lesseps · Barcelona",
+    title: "Jiu-Jitsu en Lesseps, Barcelona.",
+    intro: "Tu grupo de BJJ en Gràcia, a pocos minutos de Lesseps, en Carrer de Verdi 241.",
     facts: [
       "Carrer de Verdi 241",
       "Lunes, miércoles y viernes · 20:30",
@@ -142,6 +142,13 @@ export async function generateMetadata({
   searchParams: Promise<{ page?: string }>;
 }): Promise<Metadata> {
   const path = (await searchParams).page ?? "/";
+  if (path === "/family-behring") {
+    return pageMetadata(
+      path,
+      "Familia Behring | Historia del Jiu-Jitsu",
+      "Conoce la historia de la Familia Behring, la trayectoria de Mestre Flavio Behring y su legado en el Brazilian Jiu-Jitsu.",
+    );
+  }
   const p = content[path];
   return p
     ? pageMetadata(path, p.title, p.intro)
@@ -203,12 +210,49 @@ function Page({ data }: { data: Content }) {
     </main>
   );
 }
+function BehringFamilyPage() {
+  return (
+    <main>
+      <section style={{ background: "#000", color: "white", padding: "clamp(70px,12vw,130px) 0" }}>
+        <div className="wrap grid grid-2" style={{ alignItems: "center", gap: 48 }}>
+          <div>
+            <p className="eyebrow">Legado · Desde 1947</p>
+            <h1 style={{ fontSize: "clamp(3rem,7vw,6.5rem)", letterSpacing: "-.07em", lineHeight: 0.9, margin: "16px 0 24px" }}>
+              La Familia<br /><i style={{ color: "#c9a35e", fontFamily: "Georgia,serif", fontWeight: 400 }}>Behring.</i>
+            </h1>
+            <p style={{ maxWidth: 570, fontSize: "1.1rem", lineHeight: 1.7, color: "#d9e3e4" }}>
+              Una historia de dedicación técnica, formación humana y compromiso con el verdadero espíritu del Jiu-Jitsu.
+            </p>
+          </div>
+          <div style={{ position: "relative", minHeight: 410 }}>
+            <Image src="/images/behring-family-history.png" alt="Mestre Flavio Behring junto a miembros de la Familia Behring" fill priority sizes="(max-width: 760px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+          </div>
+        </div>
+      </section>
+      <article className="wrap" style={{ maxWidth: 860, padding: "80px 0" }}>
+        <p className="eyebrow">La historia</p>
+        <h2 style={{ fontSize: "clamp(2.2rem,5vw,4rem)", lineHeight: 0.96, letterSpacing: "-.05em", margin: "14px 0 30px" }}>Un legado construido en el tatami.</h2>
+        <div style={{ display: "grid", gap: 22, fontSize: "1.05rem", lineHeight: 1.8, color: "#34464d" }}>
+          <p>La historia de la Familia Behring forma parte de la historia del Jiu-Jitsu brasileño. En 1947, Flavio Behring comenzó su aprendizaje con Hélio Gracie. De niño, el asma lo mantenía alejado del deporte; el Jiu-Jitsu se convirtió en el camino para desarrollar salud, equilibrio y confianza.</p>
+          <p>Con solo 14 años, fue elegido por Carlos Gracie para responder a un desafío público de un luchador japonés llamado Shimura. Su formación continuó como monitor en la Academia Gracie y junto al profesor João Alberto Barreto, de quien asumió temporalmente alumnos durante su recuperación de una lesión.</p>
+          <p>En 1963, Flavio viajó a Estados Unidos con João Alberto Barreto para presentar demostraciones técnicas en instituciones como el FBI, la Academia Naval de Annapolis, universidades y academias. El objetivo era claro: mostrar la eficacia del Jiu-Jitsu ante cualquier estilo de lucha.</p>
+          <p>También amplió su experiencia practicando y compitiendo en judo. Más tarde, Marcelo y Sylvio Behring empezaron su formación específica bajo la supervisión de su padre, desarrollándose como luchadores y profesores.</p>
+          <p>Behring Jiu-Jitsu mantiene esta visión: una institución centrada en la educación, la preparación técnica y el desarrollo del carácter de cada alumno.</p>
+        </div>
+      </article>
+      <section style={{ background: "#e9e5db", padding: "72px 0" }}><div className="wrap" style={{ textAlign: "center" }}><p className="eyebrow">Sigue nuestro día a día</p><h2 style={{ fontSize: "clamp(2rem,4vw,3.4rem)", letterSpacing: "-.05em", margin: "14px 0 24px" }}>Winner Behring Spain en Instagram</h2><a href="https://www.instagram.com/winner_behring_spain/" target="_blank" rel="noreferrer" className="button" style={{ background: "#c13584", color: "white" }}>@winner_behring_spain</a></div></section>
+    </main>
+  );
+}
+
 export default async function Home({
   searchParams,
 }: {
   searchParams: Promise<{ page?: string }>;
 }) {
-  const data = content[(await searchParams).page ?? ""];
+  const path = (await searchParams).page ?? "";
+  if (path === "/family-behring") return <BehringFamilyPage />;
+  const data = content[path];
   if (data) return <Page data={data} />;
   return (
     <main>

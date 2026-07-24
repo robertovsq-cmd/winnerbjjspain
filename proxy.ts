@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 const landingPages = new Set([
-  "/about", "/classes", "/schedule", "/pricing", "/blog", "/contact", "/barcelona",
+  "/about", "/family-behring", "/classes", "/schedule", "/pricing", "/blog", "/contact", "/barcelona",
   "/barcelona/gracia", "/barcelona/la-salut", "/barcelona/lesseps", "/no-gi", "/kids",
   "/women", "/private-lessons", "/competition", "/free-trial",
 ]);
