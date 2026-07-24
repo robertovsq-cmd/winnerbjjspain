@@ -72,12 +72,21 @@ export function Header() {
         </a>
         <Link
           href="/free-trial"
-          className="button"
+          className="button header-cta"
           style={{ minHeight: 38, padding: "0 14px" }}
         >
           Clase de prueba
         </Link>
       </div>
+      <nav className="mobile-nav" aria-label="Navegación principal">
+        <Link href="/classes">Clases</Link>
+        <Link href="/schedule">Horarios</Link>
+        <Link href="/barcelona">Sedes</Link>
+        <Link href="/about">Academia</Link>
+        <Link href="/family-behring">Familia Behring</Link>
+        <Link href="/why-bjj-barcelona">¿Por qué BJJ?</Link>
+        <Link href="/free-trial" style={{ color: "#c9a35e" }}>Clase de prueba</Link>
+      </nav>
     </header>
   );
 }
