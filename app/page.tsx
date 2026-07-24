@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "./seo";
 
 const wa =
   "https://wa.me/34645984600?text=Hola%2C%20quiero%20reservar%20una%20clase%20de%20prueba";
@@ -140,8 +141,11 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<{ page?: string }>;
 }): Promise<Metadata> {
-  const p = content[(await searchParams).page ?? ""];
-  return p ? { title: p.title, description: p.intro } : {};
+  const path = (await searchParams).page ?? "/";
+  const p = content[path];
+  return p
+    ? pageMetadata(path, p.title, p.intro)
+    : pageMetadata("/", "Brazilian Jiu-Jitsu en Barcelona", "Entrena Brazilian Jiu-Jitsu con Winner Behring Spain en Gràcia, Barcelona, y Badalona. Clases para adultos, niños y competición.");
 }
 function Page({ data }: { data: Content }) {
   return (
