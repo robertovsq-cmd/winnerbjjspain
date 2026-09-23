@@ -23,4 +23,4 @@ El proyecto está preparado para desplegarse en Vercel sin configuración adicio
 - Metadata, canonical, Open Graph y Twitter Card.
 - Datos estructurados `SportsActivityLocation`.
 - `robots.txt` y sitemap dinámico.
-- Páginas de intención local para Barcelona, Gràcia, La Salut y Lesseps.
+- Páginas de intención local para Barcelona, Gràcia y Lesseps.

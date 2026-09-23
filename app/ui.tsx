@@ -104,16 +104,11 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <p className="eyebrow">Sedes</p>
+          <p className="eyebrow">Sede</p>
           <p>
             Striking Center
             <br />
             Carrer de Verdi, 241 · Gràcia
-          </p>
-          <p>
-            JK1 Boxing
-            <br />
-            Carrer de l&apos;Havana, 7 · Badalona
           </p>
         </div>
         <div>

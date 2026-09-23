@@ -41,9 +41,8 @@ const content: Record<string, Content> = {
     intro:
       "Reserva antes tu clase de prueba por WhatsApp y elige la sede que mejor te convenga.",
     facts: [
-      "Gràcia · lunes, miércoles y viernes · 20:30",
-      "Gràcia · martes y jueves · 16:30",
-      "Badalona · martes y jueves · 10:30 y 20:30",
+      "Gràcia · lunes a viernes · 20:30",
+      "Gràcia · martes · 16:30 a 17:30",
     ],
   },
   "/pricing": {
@@ -57,7 +56,7 @@ const content: Record<string, Content> = {
     eyebrow: "Contacto",
     title: "Hablemos de tu primera clase.",
     intro: "Escríbenos directamente por WhatsApp y elige tu sede y horario.",
-    facts: ["+34 645 984 600", "Gràcia", "Badalona"],
+    facts: ["+34 645 984 600", "Gràcia · Barcelona", "Reserva por WhatsApp"],
   },
   "/no-gi": {
     eyebrow: "No-Gi",
@@ -98,30 +97,24 @@ const content: Record<string, Content> = {
     title: "Empieza tu Jiu-Jitsu hoy.",
     intro:
       "No necesitas experiencia. Ven con ropa deportiva cómoda; nosotros te orientamos.",
-    facts: ["Sin experiencia", "Gràcia o Badalona", "Reserva por WhatsApp"],
+    facts: ["Sin experiencia", "Gràcia · Barcelona", "Reserva por WhatsApp"],
   },
   "/barcelona": {
     eyebrow: "Winner Behring Spain",
-    title: "Tu Jiu-Jitsu, cerca de ti.",
+    title: "Tu Jiu-Jitsu en Gràcia.",
     intro:
-      "Entrena en Gràcia, Barcelona, o en Badalona con el equipo de Winner Behring Spain.",
-    facts: ["Gràcia", "Badalona", "Clase de prueba"],
+      "Entrena en Gràcia, Barcelona, con el equipo de Winner Behring Spain.",
+    facts: ["Gràcia", "Barcelona", "Clase de prueba"],
   },
   "/barcelona/gracia": {
     eyebrow: "BJJ Gràcia",
     title: "Jiu-Jitsu en Gràcia.",
     intro: "Entrena en Striking Center Barcelona, Carrer de Verdi 241.",
     facts: [
-      "Lunes, miércoles y viernes · 20:30",
-      "Martes y jueves · 16:30",
+      "Lunes a viernes · 20:30",
+      "Martes · 16:30 a 17:30",
       "Carrer de Verdi 241",
     ],
-  },
-  "/barcelona/la-salut": {
-    eyebrow: "BJJ La Salut · Badalona",
-    title: "Jiu-Jitsu en La Salut, Badalona.",
-    intro: "Entrena en JK1 Boxing, Carrer de l'Havana 7, La Salut, Badalona.",
-    facts: ["Martes y jueves", "10:30 y 20:30", "Carrer de l'Havana 7"],
   },
   "/barcelona/lesseps": {
     eyebrow: "BJJ Lesseps · Barcelona",
@@ -129,8 +122,8 @@ const content: Record<string, Content> = {
     intro: "Tu grupo de BJJ en Gràcia, a pocos minutos de Lesseps, en Carrer de Verdi 241.",
     facts: [
       "Carrer de Verdi 241",
-      "Lunes, miércoles y viernes · 20:30",
-      "Martes y jueves · 16:30",
+      "Lunes a viernes · 20:30",
+      "Martes · 16:30 a 17:30",
     ],
   },
   "/blog": {
@@ -164,7 +157,7 @@ export async function generateMetadata({
   const p = content[path];
   return p
     ? pageMetadata(path, p.title, p.intro)
-    : pageMetadata("/", "Brazilian Jiu-Jitsu en Barcelona", "Entrena Brazilian Jiu-Jitsu con Winner Behring Spain en Gràcia, Barcelona, y Badalona. Clases para adultos, niños y competición.");
+    : pageMetadata("/", "Brazilian Jiu-Jitsu en Barcelona", "Entrena Brazilian Jiu-Jitsu con Winner Behring Spain en Gràcia, Barcelona. Clases para adultos, niños y competición.");
 }
 function Page({ data }: { data: Content }) {
   return (
@@ -289,7 +282,7 @@ export default async function Home({
         >
           <div>
             <p className="eyebrow">
-              Brazilian Jiu-Jitsu · Barcelona y Badalona
+              Brazilian Jiu-Jitsu · Barcelona
             </p>
             <h1
               style={{
@@ -353,7 +346,7 @@ export default async function Home({
         </div>
       </section>
       <section className="wrap" style={{ padding: "84px 0" }}>
-        <p className="eyebrow">Sedes y horarios</p>
+        <p className="eyebrow">Sede y horarios</p>
         <h2
           style={{
             fontSize: "clamp(2.2rem,5vw,4rem)",
@@ -362,11 +355,11 @@ export default async function Home({
             margin: "14px 0 38px",
           }}
         >
-          Dos sedes.
+          Tu sede en Barcelona.
           <br />
           Una misma línea.
         </h2>
-        <div className="grid grid-2">
+        <div style={{ maxWidth: 540 }}>
           <article style={{ background: "#e9e5db", padding: 32 }}>
             <p className="eyebrow">Gràcia · Barcelona</p>
             <h3 style={{ fontSize: "1.8rem", margin: "10px 0" }}>
@@ -374,23 +367,12 @@ export default async function Home({
             </h3>
             <p>Carrer de Verdi, 241 · 08024 Barcelona</p>
             <p style={{ fontWeight: 800 }}>
-              Lunes, miércoles y viernes · 20:30
+              Lunes a viernes · 20:30
               <br />
-              Martes y jueves · 16:30
+              Martes · 16:30 a 17:30
             </p>
             <a href={wa} className="button">
               Reservar en Gràcia
-            </a>
-          </article>
-          <article
-            style={{ background: "#0b2635", color: "white", padding: 32 }}
-          >
-            <p className="eyebrow">Badalona</p>
-            <h3 style={{ fontSize: "1.8rem", margin: "10px 0" }}>JK1 Boxing</h3>
-            <p>Carrer de l&apos;Havana, 7 · 08914 Badalona</p>
-            <p style={{ fontWeight: 800 }}>Martes y jueves · 10:30 y 20:30</p>
-            <a href={wa} className="button button-outline">
-              Reservar en Badalona
             </a>
           </article>
         </div>

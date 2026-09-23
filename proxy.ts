@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 
 const landingPages = new Set([
   "/about", "/family-behring", "/why-bjj-barcelona", "/classes", "/schedule", "/pricing", "/blog", "/contact", "/barcelona",
-  "/barcelona/gracia", "/barcelona/la-salut", "/barcelona/lesseps", "/no-gi", "/kids",
+  "/barcelona/gracia", "/barcelona/lesseps", "/no-gi", "/kids",
   "/women", "/private-lessons", "/competition", "/free-trial",
 ]);
 
