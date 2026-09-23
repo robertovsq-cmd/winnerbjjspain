@@ -104,11 +104,16 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <p className="eyebrow">Sede</p>
+          <p className="eyebrow">Entrena en</p>
           <p>
-            Striking Center
+            Striking Center Barcelona
             <br />
             Carrer de Verdi, 241 · Gràcia
+          </p>
+          <p>
+            <a href="https://www.instagram.com/strikingcenter_bcn/" target="_blank" rel="noreferrer" style={{ color: "#e86aad", fontWeight: 800 }}>
+              @strikingcenter_bcn
+            </a>
           </p>
         </div>
         <div>

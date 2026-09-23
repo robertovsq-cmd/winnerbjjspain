@@ -41,8 +41,8 @@ const content: Record<string, Content> = {
     intro:
       "Reserva antes tu clase de prueba por WhatsApp y elige la sede que mejor te convenga.",
     facts: [
-      "Gràcia · lunes a viernes · 20:30",
-      "Gràcia · martes · 16:30 a 17:30",
+      "Striking Center · lunes a viernes · 20:30",
+      "Striking Center · martes y jueves · 16:30 a 17:30",
     ],
   },
   "/pricing": {
@@ -55,8 +55,8 @@ const content: Record<string, Content> = {
   "/contact": {
     eyebrow: "Contacto",
     title: "Hablemos de tu primera clase.",
-    intro: "Escríbenos directamente por WhatsApp y elige tu sede y horario.",
-    facts: ["+34 645 984 600", "Gràcia · Barcelona", "Reserva por WhatsApp"],
+    intro: "Escríbenos directamente por WhatsApp y reserva tu clase en Striking Center Barcelona.",
+    facts: ["+34 645 984 600", "Striking Center · Gràcia", "Reserva por WhatsApp"],
   },
   "/no-gi": {
     eyebrow: "No-Gi",
@@ -97,33 +97,33 @@ const content: Record<string, Content> = {
     title: "Empieza tu Jiu-Jitsu hoy.",
     intro:
       "No necesitas experiencia. Ven con ropa deportiva cómoda; nosotros te orientamos.",
-    facts: ["Sin experiencia", "Gràcia · Barcelona", "Reserva por WhatsApp"],
+    facts: ["Sin experiencia", "Striking Center · Gràcia", "Reserva por WhatsApp"],
   },
   "/barcelona": {
     eyebrow: "Winner Behring Spain",
-    title: "Tu Jiu-Jitsu en Gràcia.",
+    title: "Tu Jiu-Jitsu en Striking Center.",
     intro:
-      "Entrena en Gràcia, Barcelona, con el equipo de Winner Behring Spain.",
-    facts: ["Gràcia", "Barcelona", "Clase de prueba"],
+      "Entrena en Striking Center Barcelona, Carrer de Verdi 241, con el equipo de Winner Behring Spain.",
+    facts: ["Striking Center", "Carrer de Verdi 241", "Clase de prueba"],
   },
   "/barcelona/gracia": {
-    eyebrow: "BJJ Gràcia",
-    title: "Jiu-Jitsu en Gràcia.",
-    intro: "Entrena en Striking Center Barcelona, Carrer de Verdi 241.",
+    eyebrow: "Striking Center · Gràcia",
+    title: "Jiu-Jitsu en Striking Center.",
+    intro: "Entrena en Striking Center Barcelona, Carrer de Verdi 241, Gràcia.",
     facts: [
       "Lunes a viernes · 20:30",
-      "Martes · 16:30 a 17:30",
+      "Martes y jueves · 16:30 a 17:30",
       "Carrer de Verdi 241",
     ],
   },
   "/barcelona/lesseps": {
-    eyebrow: "BJJ Lesseps · Barcelona",
-    title: "Jiu-Jitsu en Lesseps, Barcelona.",
-    intro: "Tu grupo de BJJ en Gràcia, a pocos minutos de Lesseps, en Carrer de Verdi 241.",
+    eyebrow: "Striking Center · Gràcia",
+    title: "Jiu-Jitsu cerca de Lesseps.",
+    intro: "Tu grupo de BJJ en Striking Center Barcelona, Carrer de Verdi 241, a pocos minutos de Lesseps.",
     facts: [
-      "Carrer de Verdi 241",
+      "Striking Center · Carrer de Verdi 241",
       "Lunes a viernes · 20:30",
-      "Martes · 16:30 a 17:30",
+      "Martes y jueves · 16:30 a 17:30",
     ],
   },
   "/blog": {
@@ -361,7 +361,7 @@ export default async function Home({
         </h2>
         <div style={{ maxWidth: 540 }}>
           <article style={{ background: "#e9e5db", padding: 32 }}>
-            <p className="eyebrow">Gràcia · Barcelona</p>
+            <p className="eyebrow">Striking Center · Gràcia</p>
             <h3 style={{ fontSize: "1.8rem", margin: "10px 0" }}>
               Striking Center
             </h3>
@@ -369,7 +369,12 @@ export default async function Home({
             <p style={{ fontWeight: 800 }}>
               Lunes a viernes · 20:30
               <br />
-              Martes · 16:30 a 17:30
+              Martes y jueves · 16:30 a 17:30
+            </p>
+            <p>
+              <a href="https://www.instagram.com/strikingcenter_bcn/" target="_blank" rel="noreferrer" style={{ color: "#b62d80", fontWeight: 800 }}>
+                @strikingcenter_bcn
+              </a>
             </p>
             <a href={wa} className="button">
               Reservar en Gràcia

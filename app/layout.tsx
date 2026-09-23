@@ -17,7 +17,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: site.url, telephone: site.phone, logo: absoluteUrl("/images/winner-logo.png") },
-      { "@type": "SportsActivityLocation", "@id": `${site.url}/#gracia`, name: "Winner Behring Spain – Gràcia", url: absoluteUrl("/barcelona/gracia"), telephone: site.phone, sport: "Brazilian Jiu-Jitsu", priceRange: "€€", address: { "@type": "PostalAddress", streetAddress: "Carrer de Verdi, 241", addressLocality: "Barcelona", postalCode: "08024", addressCountry: "ES" }, areaServed: ["Barcelona", "Gràcia", "Lesseps"] },
+      { "@type": "SportsActivityLocation", "@id": `${site.url}/#striking-center`, name: "Winner Behring Spain en Striking Center Barcelona", url: absoluteUrl("/barcelona/gracia"), telephone: site.phone, sport: "Brazilian Jiu-Jitsu", priceRange: "€€", address: { "@type": "PostalAddress", streetAddress: "Carrer de Verdi, 241", addressLocality: "Barcelona", postalCode: "08024", addressCountry: "ES" }, areaServed: ["Barcelona", "Gràcia", "Lesseps"] },
     ],
   };
   return <html lang="es"><body><Header />{children}<Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} /></body></html>;
